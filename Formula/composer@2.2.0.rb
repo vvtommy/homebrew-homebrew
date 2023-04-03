@@ -22,9 +22,9 @@ class ComposerAT220 < Formula
   depends_on "php"
 
   # Keg-relocation breaks the formula when it replaces `/usr/local` with a non-default prefix
-  on_macos do
-    pour_bottle? only_if: :default_prefix if Hardware::CPU.intel?
-  end
+  # on_macos do
+  #   pour_bottle? only_if: :default_prefix if Hardware::CPU.intel?
+  # end
 
   def install
     bin.install "composer.phar" => "composer"
