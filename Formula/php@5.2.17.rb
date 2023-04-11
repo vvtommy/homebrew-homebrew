@@ -124,7 +124,6 @@ class PhpAT5217 < Formula
     # Because for icu4c, we must link with c++ when building with intl extension
     ENV.append 'LDFLAGS', '-lstdc++' if ARGV.include? '--with-intl'
 
-    ENV.O3 # Speed things up
     system "./configure", *configure_args
 
     if ARGV.include? '--with-apache'
