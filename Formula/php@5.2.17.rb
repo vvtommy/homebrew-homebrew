@@ -35,17 +35,6 @@ class PhpAT5217 < Formula
   if ARGV.include? '--with-readline'
     depends_on 'readline'
   end
-  
-  def options
-   [
-     ['--with-mysql', 'Include MySQL support'],
-     ['--with-pgsql', 'Include PostgreSQL support'],
-     ['--with-fpm', 'Enable building of the fpm SAPI executable'],
-     ['--with-apache', 'Build shared Apache 2.0 Handler module'],
-     ['--with-intl', 'Include intl extension'],
-     ['--with-readline', 'Include readline extension']
-   ]
-  end
 
   # depends_on 'cmake'
 
@@ -72,6 +61,9 @@ class PhpAT5217 < Formula
       "--with-xsl=/usr",
       "--with-curl=/usr",
       "--with-gd",
+      "--with-mssql",
+      "--with-mysql",
+      "--with-readline",
       "--enable-gd-native-ttf",
       "--with-mcrypt=#{Formula.factory('mcrypt').prefix}",
       "--with-jpeg-dir=#{Formula.factory('jpeg').prefix}",
