@@ -5,9 +5,9 @@ def mysql_installed?
 end
 
 class PhpAT5217 < Formula
-  url 'http://ca2.php.net/distributions/php-5.2.17.tar.gz'
+  url 'https://museum.php.net/php5/php-5.2.17.tar.gz'
   homepage ''
-  md5 '04d321d5aeb9d3a051233dbd24220ef1'
+  sha256 '1abe07c1fdd64184708a3ba179abcfcca5662a4e0d2037eb2748b75abc42e767'
   version '5.2.17'
 
   skip_clean [ 'bin', 'sbin' ]
